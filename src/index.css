@@ -1,0 +1,18 @@
+@import "tailwindcss";
+
+body {
+  min-height: 100vh;
+}
+
+@keyframes slowZoom {
+  from {
+    transform: scale(0.9);
+  }
+  to {
+    transform: scale(1.08);
+  }
+}
+
+.animate-slowZoom {
+  animation: slowZoom 2s linear forwards;
+}
