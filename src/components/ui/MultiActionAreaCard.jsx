@@ -14,16 +14,16 @@ function MultiActionAreaCard({
   featureLink = "surajKumar",
 }) {
   return (
-    <div className="rounded-2xl shadow-lg text-center hover:scale-105 transition duration-300 w-full border border-b-blue-50">
+    <div className="rounded-2xl shadow-lg text-center hover:scale-105 transition duration-300 w-full border border-b-blue-50 h-96">
       <img
         src={featureImg}
         alt={featureImg}
-        className="w-full h-32  object-cover rounded-t-2xl"
+        className="w-full h-48  object-cover rounded-t-2xl"
       />
 
       <h3 className="mt-4 text-xl font-semibold">{featureTitle}</h3>
 
-      <p className="text-gray-500">{featureDescription}</p>
+      <p className="text-white ">{featureDescription}</p>
 
       <button className="mt-4 px-4 py-2 rounded-lg bg-black text-white mb-1">
         Explore
