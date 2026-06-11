@@ -6,7 +6,7 @@ import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename="/placementProjectUI">
       <App />
     </BrowserRouter>
   </StrictMode>,

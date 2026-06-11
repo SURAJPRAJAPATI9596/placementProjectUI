@@ -41,11 +41,18 @@ const Navbar = ({ dark, setDark }) => {
         <div className="flex justify-around w-[50%]">
           <img src={logo} alt="" className="h-12.5 rounded-4xl" />
           <span className="cursor-pointer">
-            <NavLink to="/placementProjectUI/">Home</NavLink>
+            <NavLink
+              to="/placementProjectUI"
+              className={({ isActive }) =>
+                isActive ? "text-shadow-white font-bold bg-blue-600" : ""
+              }
+            >
+              Home
+            </NavLink>
           </span>
           <span>
             <span className="cursor-pointer" onClick={handleResourceOpen}>
-              <NavLink to="/resources">Resources ▼</NavLink>
+              <NavLink to="/">Resources ▼</NavLink>
             </span>
           </span>
           <Menu
@@ -63,11 +70,19 @@ const Navbar = ({ dark, setDark }) => {
             <NavLink to="/resume">Resume ▼</NavLink>
           </span>
           <span className="cursor-pointer" onClick={handleJobOpen}>
-            <NavLink to="/job"></NavLink>
+            <NavLink to="/jobs"></NavLink>
             Jobs ▼
           </span>
           <span className="cursor-pointer">
-            <NavLink to="/about">About</NavLink>
+            <NavLink
+              to="/about"
+              className={({ isActive }) =>
+                isActive ? "text-blue-500 font-bold" : ""
+              }
+            >
+              {/* text-shadow-white font-bold bg-blue-600 */}
+              About
+            </NavLink>
           </span>
           {dark ? (
             <span onClick={() => setDark(!dark)} className="cursor-pointer">

@@ -10,6 +10,7 @@ function App() {
   const [dark, setDark] = useState(true);
   return (
     <>
+      <Navbar dark={dark} setDark={setDark} />
       <Routes>
         <Route
           path="/placementProjectUI/"
@@ -18,7 +19,7 @@ function App() {
         <Route path="/resources" element={<Resources />}></Route>
         <Route path="/resume" element={<Resume />}></Route>
         <Route path="/job" element={<Job />}></Route>
-        <Route path="/about" element={<About />}></Route>
+        <Route path="/about" element={<About dark={dark} />}></Route>
       </Routes>
     </>
   );

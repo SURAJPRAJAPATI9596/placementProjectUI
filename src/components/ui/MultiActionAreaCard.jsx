@@ -8,9 +8,9 @@ import CardActions from "@mui/material/CardActions";
 import logo from "../../assets/HeroImg/logo.png";
 
 function MultiActionAreaCard({
-  featureImg,
-  featureTitle,
-  featureDescription,
+  featureImg = "",
+  featureTitle = "",
+  featureDescription = "",
   featureLink = "surajKumar",
 }) {
   return (

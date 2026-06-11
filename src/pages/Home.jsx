@@ -10,7 +10,6 @@ import featuresData from "../data/featuresData";
 const Home = ({ dark, setDark }) => {
   return (
     <>
-      <Navbar dark={dark} setDark={setDark} />
       <Hero dark={dark} setDark={setDark} />
       <TopUsers dark={dark} setDark={setDark}></TopUsers>
       <Features dark={dark} setDark={setDark}></Features>
