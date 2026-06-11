@@ -117,10 +117,19 @@ const Navbar = ({ dark, setDark }) => {
       >
         <div className={`flex flex-col justify-around h-[60%] pl-3 `}>
           <img src={logo} alt="" className="h-12.5 rounded-4xl" />
-          <span>HOME</span>
+          <span>
+            <NavLink
+              to="/"
+              className={({ isActive }) =>
+                isActive ? "text-shadow-white font-bold bg-blue-600" : ""
+              }
+            >
+              Home
+            </NavLink>
+          </span>
           <span>
             <span className="cursor-pointer" onClick={handleResourceOpen}>
-              Resources ▼
+              <NavLink to="/">Resources ▼</NavLink>
             </span>
           </span>
           <Menu
@@ -135,7 +144,7 @@ const Navbar = ({ dark, setDark }) => {
             <MenuItem onClick={handleClose}>Aptitude Preparation</MenuItem>
           </Menu>
           <span className="cursor-pointer" onClick={handleResumeOpen}>
-            Resume ▼
+            <NavLink to="/resume">Resume ▼</NavLink>
           </span>
           <Menu
             anchorEl={resumeAnchor}
@@ -147,7 +156,7 @@ const Navbar = ({ dark, setDark }) => {
             <MenuItem onClick={handleClose}>ATS Score</MenuItem>
           </Menu>
           <span className="cursor-pointer" onClick={handleJobOpen}>
-            Jobs ▼
+            <NavLink to="/jobs"></NavLink>
           </span>
           <Menu
             anchorEl={jobAnchor}
@@ -158,7 +167,17 @@ const Navbar = ({ dark, setDark }) => {
 
             <MenuItem onClick={handleClose}>Saved Jobs</MenuItem>
           </Menu>
-          <span>About</span>
+          <span>
+            <NavLink
+              to="/about"
+              className={({ isActive }) =>
+                isActive ? "text-blue-500 font-bold" : ""
+              }
+            >
+              {/* text-shadow-white font-bold bg-blue-600 */}
+              About
+            </NavLink>
+          </span>
           {dark ? (
             <span onClick={() => setDark(!dark)}>
               <CiLight className="h-10 w-10" />
