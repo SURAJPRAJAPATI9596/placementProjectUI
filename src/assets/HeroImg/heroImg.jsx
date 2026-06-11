@@ -1,7 +1,14 @@
-import img1 from "../../assets/HeroImg/img1.jpeg";
-import img2 from "../../assets/HeroImg/img2.jpeg";
-import img3 from "../../assets/HeroImg/logo.png";
-
-const imgData = [img1, img2, img3];
+const imgData = [
+  "https://images.unsplash.com/photo-1522202176988-66273c2fd55f",
+  "https://images.unsplash.com/photo-1516321318423-f06f85e504b3",
+  "https://images.unsplash.com/photo-1521737604893-d14cc237f11d",
+  "https://images.unsplash.com/photo-1552664730-d307ca884978",
+  "https://images.unsplash.com/photo-1523240795612-9a054b0db644",
+  "https://images.unsplash.com/photo-1517048676732-d65bc937f952",
+  "https://images.unsplash.com/photo-1504384308090-c894fdcc538d",
+  "https://images.unsplash.com/photo-1522071820081-009f0129c71c",
+  "https://images.unsplash.com/photo-1513258496099-48168024aec0",
+  "https://images.unsplash.com/photo-1543269865-cbf427effbad",
+];
 
 export default imgData;
