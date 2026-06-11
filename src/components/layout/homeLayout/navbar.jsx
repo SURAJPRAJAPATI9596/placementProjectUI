@@ -42,7 +42,7 @@ const Navbar = ({ dark, setDark }) => {
           <img src={logo} alt="" className="h-12.5 rounded-4xl" />
           <span className="cursor-pointer">
             <NavLink
-              to="/placementProjectUI"
+              to="/"
               className={({ isActive }) =>
                 isActive ? "text-shadow-white font-bold bg-blue-600" : ""
               }

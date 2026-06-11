@@ -13,7 +13,7 @@ function App() {
       <Navbar dark={dark} setDark={setDark} />
       <Routes>
         <Route
-          path="/placementProjectUI/"
+          path="/"
           element={<Home dark={dark} setDark={setDark}></Home>}
         ></Route>
         <Route path="/resources" element={<Resources />}></Route>
