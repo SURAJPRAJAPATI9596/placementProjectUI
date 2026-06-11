@@ -16,7 +16,7 @@ const Features = ({ dark, setDark }) => {
       </div>
 
       {/* User Cards */}
-      <div className="grid sm:grid-cols-5 lg:grid-cols-4">
+      <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-y-6 gap-x-6">
         {featuresData.map((item) => (
           <MultiActionAreaCard
             key={item.featureTitle}

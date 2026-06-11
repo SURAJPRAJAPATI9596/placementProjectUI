@@ -16,3 +16,23 @@ body {
 .animate-slowZoom {
   animation: slowZoom 2s linear forwards;
 }
+
+/* index.css */
+html {
+  scroll-behavior: smooth;
+}
+/* Only target layout elements */
+section,
+div,
+img,
+h1,
+h2,
+h3,
+p,
+button {
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    padding 0.3s ease,
+    font-size 0.3s ease;
+}

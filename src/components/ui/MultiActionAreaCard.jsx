@@ -14,7 +14,7 @@ function MultiActionAreaCard({
   featureLink = "surajKumar",
 }) {
   return (
-    <div className="rounded-2xl shadow-lg  text-center hover:scale-105 transition duration-300 w-87.5 border border-b-blue-50">
+    <div className="rounded-2xl shadow-lg text-center hover:scale-105 transition duration-300 w-full border border-b-blue-50">
       <img
         src={featureImg}
         alt={featureImg}
