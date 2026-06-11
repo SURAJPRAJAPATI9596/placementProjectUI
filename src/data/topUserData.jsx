@@ -1,11 +1,12 @@
+import logo from "../assets/HeroImg/logo.png";
 export const users = [
   {
     id: 1,
     name: "Suraj Prajapati",
     role: "Frontend Developer",
-    company: "TCS",
+    company: "........",
     score: "94%",
-    img: "https://i.pravatar.cc/150?img=1",
+    img: { logo },
   },
   {
     id: 2,

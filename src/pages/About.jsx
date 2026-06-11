@@ -1,3 +1,4 @@
+import Footer from "../components/layout/homeLayout/footer";
 import React from "react";
 import {
   FaUserGraduate,
@@ -146,6 +147,7 @@ const About = ({ dark }) => {
           growth opportunities.
         </p>
       </section>
+      <Footer dark={dark} />
     </div>
   );
 };

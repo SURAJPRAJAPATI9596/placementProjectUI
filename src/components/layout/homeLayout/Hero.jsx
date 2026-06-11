@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import imgData from "../../../assets/HeroImg/heroImg";
+import imgData from "../../../data/heroImg";
 import logo from "../../../assets/HeroImg/logo.png";
 const Hero = ({ dark, setDark }) => {
   const [currImg, setcurrImg] = useState(0);
