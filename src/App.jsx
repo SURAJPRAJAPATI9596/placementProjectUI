@@ -5,7 +5,9 @@ import Home from "./pages/Home";
 import About from "./pages/about";
 import Job from "./pages/job";
 import Resources from "./pages/resources";
-import Resume from "./pages/resume";
+import Ats from "./pages/resume/Ats";
+import Resume from "./pages/resume/Resume";
+
 function App() {
   const [dark, setDark] = useState(true);
   return (
@@ -20,6 +22,8 @@ function App() {
         <Route path="/resume" element={<Resume />}></Route>
         <Route path="/job" element={<Job />}></Route>
         <Route path="/about" element={<About dark={dark} />}></Route>
+        <Route path="/resume/ats" element={<Ats />}></Route>
+        <Route path="/resume/resume" element={<Resume />}></Route>
       </Routes>
     </>
   );
