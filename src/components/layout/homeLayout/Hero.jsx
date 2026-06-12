@@ -22,7 +22,7 @@ const Hero = ({ dark, setDark }) => {
         key={currImg}
         src={imgData[currImg]}
         alt=""
-        className="h-[90%] w-[90%] object-cover m-5 bg-blue-400 rounded-4xl animate-slowZoom"
+        className="h-[90%] w-[90%] object-cover m-5 bg-blue-400 rounded-2xl animate-slowZoom"
       />
     </div>
   );
