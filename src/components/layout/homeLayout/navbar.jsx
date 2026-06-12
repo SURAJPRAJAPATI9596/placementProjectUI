@@ -8,6 +8,7 @@ import { CiLight } from "react-icons/ci";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import { NavLink } from "react-router-dom";
+import profile from "../../../assets/profile.png";
 
 const Navbar = ({ dark, setDark }) => {
   const [menu, setMenu] = useState(false);
@@ -39,12 +40,12 @@ const Navbar = ({ dark, setDark }) => {
         className={`hidden lg:flex w-full justify-around text-sm md:text-lg  ${dark ? "bg-black text-white" : "bg-[#B2AFD3] text-black"}`}
       >
         <div className="flex justify-around w-[50%]">
-          <img src={logo} alt="" className="h-12.5 rounded-4xl" />
+          <img src={logo} alt="" className="w-28 h-7 rounded-4xl " />
           <span className="cursor-pointer">
             <NavLink
               to="/"
               className={({ isActive }) =>
-                isActive ? "text-shadow-white font-bold bg-blue-600" : ""
+                isActive ? "text-blue-500 font-bold" : ""
               }
             >
               Home
@@ -99,19 +100,36 @@ const Navbar = ({ dark, setDark }) => {
           <Button variant="outlined">Login</Button>
         </div>
       </div>
-      {menu ? (
-        <span className="lg:hidden absolute" onClick={() => setMenu(!menu)}>
-          <ImCross
-            className={`${dark ? "bg-black text-white" : "bg-white text-black"}`}
-          />
-        </span>
-      ) : (
-        <span className={`lg:hidden absolute`} onClick={() => setMenu(!menu)}>
-          <GiHamburgerMenu
-            className={`${dark ? "bg-black text-white" : "bg-white text-black"}`}
-          />
-        </span>
-      )}
+      <div
+        className={`lg:hidden flex justify-between items-center w-full ${dark ? "bg-black text-white" : "bg-white text-black"}`}
+      >
+        <img src={profile} alt="" className="h-8 w-8 rounded-2xl pl-0.5" />
+        <img src={logo} alt="" className="h-7 rounded pl-0.5" />
+        {dark ? (
+          <span onClick={() => setDark(!dark)}>
+            <CiLight className="h-10 w-10" />
+          </span>
+        ) : (
+          <span onClick={() => setDark(!dark)}>
+            <MdDarkMode className="h-10 w-10" />
+          </span>
+        )}
+
+        {menu ? (
+          <span onClick={() => setMenu(!menu)}>
+            <ImCross
+              className={`${dark ? "bg-black text-white" : "bg-white text-black"}`}
+            />
+          </span>
+        ) : (
+          <span onClick={() => setMenu(!menu)}>
+            <GiHamburgerMenu
+              className={`${dark ? "bg-black text-white" : "bg-white text-black"}`}
+            />
+          </span>
+        )}
+      </div>
+
       <div
         className={`h-screen w-60 border border-black 0 lg:hidden flex flex-col justify-between md:text-lg text-sm pt-6 ${!menu ? "hidden" : "block"} ${dark ? "bg-black text-white" : "bg-white text-black"} `}
       >
@@ -156,7 +174,7 @@ const Navbar = ({ dark, setDark }) => {
             <MenuItem onClick={handleClose}>ATS Score</MenuItem>
           </Menu>
           <span className="cursor-pointer" onClick={handleJobOpen}>
-            <NavLink to="/jobs"></NavLink>
+            <NavLink to="/jobs">Job</NavLink>
           </span>
           <Menu
             anchorEl={jobAnchor}
@@ -178,15 +196,6 @@ const Navbar = ({ dark, setDark }) => {
               About
             </NavLink>
           </span>
-          {dark ? (
-            <span onClick={() => setDark(!dark)}>
-              <CiLight className="h-10 w-10" />
-            </span>
-          ) : (
-            <span onClick={() => setDark(!dark)}>
-              <MdDarkMode className="h-10 w-10" />
-            </span>
-          )}
         </div>
         <div>
           <Button variant="outlined">Login</Button>

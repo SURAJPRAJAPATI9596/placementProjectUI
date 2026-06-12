@@ -22,7 +22,7 @@ const About = ({ dark }) => {
           About <span className="text-blue-600">Placement Help</span>
         </h1>
 
-        <p className="max-w-3xl mx-auto text-lg leading-relaxed">
+        <p className="max-w-3xl mx-auto text-lg leading-relaxed text-left">
           Placement Help is an AI-powered career support platform designed
           specifically for college students. Our mission is to simplify
           placement preparation by providing resume building, ATS analysis, mock
@@ -39,7 +39,7 @@ const About = ({ dark }) => {
         >
           <h2 className="text-3xl font-bold mb-4 text-center">Our Mission</h2>
 
-          <p className="text-center text-lg leading-relaxed">
+          <p className="text-lg leading-relaxed text-left">
             Many students struggle with placement preparation because they don't
             know where to start. Placement Help aims to bridge this gap by
             providing smart tools and personalized guidance that help students
