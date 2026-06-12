@@ -103,11 +103,11 @@ const Navbar = ({ dark, setDark }) => {
       <div
         className={`lg:hidden flex justify-between items-center w-full ${dark ? "bg-black text-white" : "bg-white text-black"}`}
       >
-        <div className="flex gap-2">
+        <div className="flex gap-4">
           <img src={profile} alt="" className="h-8 w-8 rounded-2xl pl-0.5" />
           <img src={logo} alt="" className="h-7 rounded pl-0.5" />
         </div>
-        <div className="flex gap-1 justify-between items-center">
+        <div className="flex gap-4 justify-between items-center">
           {dark ? (
             <span onClick={() => setDark(!dark)}>
               <CiLight className="h-10 w-10" />
