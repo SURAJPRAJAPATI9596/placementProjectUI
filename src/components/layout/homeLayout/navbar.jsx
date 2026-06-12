@@ -103,31 +103,35 @@ const Navbar = ({ dark, setDark }) => {
       <div
         className={`lg:hidden flex justify-between items-center w-full ${dark ? "bg-black text-white" : "bg-white text-black"}`}
       >
-        <img src={profile} alt="" className="h-8 w-8 rounded-2xl pl-0.5" />
-        <img src={logo} alt="" className="h-7 rounded pl-0.5" />
-        {dark ? (
-          <span onClick={() => setDark(!dark)}>
-            <CiLight className="h-10 w-10" />
-          </span>
-        ) : (
-          <span onClick={() => setDark(!dark)}>
-            <MdDarkMode className="h-10 w-10" />
-          </span>
-        )}
+        <div className="flex gap-2">
+          <img src={profile} alt="" className="h-8 w-8 rounded-2xl pl-0.5" />
+          <img src={logo} alt="" className="h-7 rounded pl-0.5" />
+        </div>
+        <div className="flex gap-1 justify-between items-center">
+          {dark ? (
+            <span onClick={() => setDark(!dark)}>
+              <CiLight className="h-10 w-10" />
+            </span>
+          ) : (
+            <span onClick={() => setDark(!dark)}>
+              <MdDarkMode className="h-10 w-10" />
+            </span>
+          )}
 
-        {menu ? (
-          <span onClick={() => setMenu(!menu)}>
-            <ImCross
-              className={`${dark ? "bg-black text-white" : "bg-white text-black"}`}
-            />
-          </span>
-        ) : (
-          <span onClick={() => setMenu(!menu)}>
-            <GiHamburgerMenu
-              className={`${dark ? "bg-black text-white" : "bg-white text-black"}`}
-            />
-          </span>
-        )}
+          {menu ? (
+            <span onClick={() => setMenu(!menu)}>
+              <ImCross
+                className={`${dark ? "bg-black text-white" : "bg-white text-black"}`}
+              />
+            </span>
+          ) : (
+            <span onClick={() => setMenu(!menu)}>
+              <GiHamburgerMenu
+                className={`${dark ? "bg-black text-white" : "bg-white text-black"}`}
+              />
+            </span>
+          )}
+        </div>
       </div>
 
       <div
