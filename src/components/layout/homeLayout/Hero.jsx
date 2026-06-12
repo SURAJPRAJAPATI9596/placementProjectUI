@@ -16,7 +16,7 @@ const Hero = ({ dark, setDark }) => {
   }, [currImg]);
   return (
     <div
-      className={`h-[70vh] md:h-[90vh] w-full overflow-hidden flex justify-center items-center ${dark ? "bg-[#342727] text-white" : "bg-white text-black"}`}
+      className={`h-[70vh] md:h-[90vh] w-full overflow-hidden flex justify-center items-center ${dark ? "bg-[#111827] text-[#FFFFFF]" : "bg-[#FFFFFF] text-[#111827]"}`}
     >
       <img
         key={currImg}

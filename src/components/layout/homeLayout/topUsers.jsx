@@ -5,13 +5,19 @@ import { GrDocumentPdf } from "react-icons/gr";
 function TopUsers({ dark, setDark }) {
   return (
     <section
-      className={`py-16 px-6 ${dark ? "bg-[#342727] text-white" : "bg-white text-black"}`}
+      className={`py-16 px-6 ${dark ? "bg-[#0F172A] text-[#FFFFFF]" : "bg-[#FFFFFF] text-[#111827]"}`}
     >
       {/* Heading */}
       <div className="text-center mb-12">
-        <h2 className="text-3xl md:text-5xl font-bold">Success Stories</h2>
+        <h2
+          className={`text-3xl md:text-5xl font-bold ${dark ? "bg-[#0F172A] text-[#FFFFFF]" : "bg-[#FFFFFF] text-[#111827]"}`}
+        >
+          Success Stories
+        </h2>
 
-        <p className="mt-4 text-gray-500">
+        <p
+          className={`mt-4 text-gray-500 ${dark ? "bg-[#0F172A] text-[#FFFFFF]" : "bg-[#FFFFFF] text-[#111827]"}`}
+        >
           Students who improved their resumes and achieved their career goals.
         </p>
       </div>
@@ -52,7 +58,7 @@ function TopUsers({ dark, setDark }) {
         {users.map((user) => (
           <div
             key={user.id}
-            className="rounded-2xl shadow-lg p-6 text-center hover:scale-105 transition duration-300 border border-b-blue-50"
+            className={`rounded-2xl shadow-lg p-6 text-center hover:scale-105 transition duration-300 border border-b-blue-50 ${dark ? "bg-[#1E293B] text-[#FFFFFF] border-[#334155]" : "bg-[#F8FAFC] text-[#111827] border-[#CBD5E1]"}`}
           >
             <img
               src={user.img}

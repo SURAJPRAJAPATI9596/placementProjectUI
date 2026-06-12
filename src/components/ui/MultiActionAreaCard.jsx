@@ -8,22 +8,31 @@ import CardActions from "@mui/material/CardActions";
 import logo from "../../assets/HeroImg/logo.png";
 
 function MultiActionAreaCard({
+  dark,
   featureImg = "",
   featureTitle = "",
   featureDescription = "",
   featureLink = "surajKumar",
 }) {
   return (
-    <div className="rounded-2xl shadow-lg text-center hover:scale-105 transition duration-300 w-full border border-b-blue-50 h-96">
+    <div
+      className={`rounded-2xl shadow-lg text-center hover:scale-105 transition duration-300 w-full border border-b-blue-50 h-96 ${dark ? "bg-[#1E293B] text-[#94A3B8] border-[#334155]" : "bg-[#F8FAFC] text-[#111827] border-[#CBD5E1]"}`}
+    >
       <img
         src={featureImg}
         alt={featureImg}
         className="w-full h-48  object-cover rounded-t-2xl"
       />
 
-      <h3 className="mt-4 text-xl font-semibold">{featureTitle}</h3>
+      <h3
+        className={`mt-4 text-xl font-semibold ${dark ? "text-[#FFFFFF]" : "text-[#111827]"}`}
+      >
+        {featureTitle}
+      </h3>
 
-      <p className="text-white ">{featureDescription}</p>
+      <p className={`${dark ? "text-[#94A3B8]" : "text-[#64748B]"}`}>
+        {featureDescription}
+      </p>
 
       <button className="mt-4 px-4 py-2 rounded-lg bg-black text-white mb-1">
         Explore

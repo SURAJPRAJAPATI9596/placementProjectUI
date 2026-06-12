@@ -37,7 +37,7 @@ const Navbar = ({ dark, setDark }) => {
   return (
     <>
       <div
-        className={`hidden lg:flex w-full justify-around text-sm md:text-lg  ${dark ? "bg-black text-white" : "bg-[#B2AFD3] text-black"}`}
+        className={`hidden lg:flex w-full justify-around text-sm md:text-lg  ${dark ? "bg-[#111827] text-[#FFFFFF]" : "bg-[#FFFFFF] text-[#111827]"}`}
       >
         <div className="flex justify-around w-[50%]">
           <img src={logo} alt="" className="w-28 h-7 rounded-4xl " />
@@ -135,10 +135,10 @@ const Navbar = ({ dark, setDark }) => {
       </div>
 
       <div
-        className={`h-screen w-60 border border-black 0 lg:hidden flex flex-col justify-between md:text-lg text-sm pt-6 ${!menu ? "hidden" : "block"} ${dark ? "bg-black text-white" : "bg-white text-black"} `}
+        className={`fixed top-0 left-0  h-screen w-60 border border-black lg:hidden flex flex-col justify-between md:text-lg text-sm pt-6 z-50 ${!menu ? "hidden" : "block"} ${dark ? "bg-black text-white" : "bg-white text-black"}`}
       >
         <div className={`flex flex-col justify-around h-[60%] pl-3 `}>
-          <img src={logo} alt="" className="h-12.5 rounded-4xl" />
+          <h1 className="text-4xl">Placify</h1>
           <span>
             <NavLink
               to="/"

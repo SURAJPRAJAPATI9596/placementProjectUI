@@ -10,10 +10,12 @@ import featuresData from "../data/featuresData";
 const Home = ({ dark, setDark }) => {
   return (
     <>
-      <Hero dark={dark} setDark={setDark} />
-      <TopUsers dark={dark} setDark={setDark}></TopUsers>
-      <Features dark={dark} setDark={setDark}></Features>
-      <Footer dark={dark} setDark={setDark} />
+      <div className="z-0">
+        <Hero dark={dark} setDark={setDark} />
+        <TopUsers dark={dark} setDark={setDark}></TopUsers>
+        <Features dark={dark} setDark={setDark}></Features>
+        <Footer dark={dark} setDark={setDark} />
+      </div>
     </>
   );
 };

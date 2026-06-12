@@ -6,13 +6,11 @@ const Footer = ({ dark, setDark }) => {
   return (
     <>
       <div
-        className={`flex flex-col text-sm md:text-lg ${dark ? "bg-black text-white" : "bg-white text-black"}`}
+        className={`flex flex-col text-sm md:text-lg ${dark ? "bg-[#020617] text-white" : "bg-[#E2E8F0] text-black"}`}
       >
-        <p className="border border-black text-center bg-blue-600 mt-3.5 text-white">
-          @suraj Prajapati
-        </p>
+        <p className="text-center mt-3.5 bg-blue-600">@suraj Prajapati</p>
         <div
-          className={`flex flex-col sm:flex-row justify-around md:pr-30 md:pl-30 mt-2 ${dark ? "bg-black text-white" : "bg-white text-black"}`}
+          className={`flex flex-col sm:flex-row justify-around md:pr-30 md:pl-30 mt-2 ${dark ? "bg-[#020617] text-white" : "bg-[#E2E8F0] text-black"}`}
         >
           <div className=" pl-5 ">
             <p className="text-2xl">Get in touch</p>
@@ -48,7 +46,7 @@ const Footer = ({ dark, setDark }) => {
           </div>
         </div>
         <p className="border border-black text-center bg-blue-600 mt-3.5 text-white">
-          @All wright reserved pw
+          @All wright reserved Placify
         </p>
       </div>
     </>
