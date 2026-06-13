@@ -1,6 +1,7 @@
-import React from "react";
-
-const FileUploader = ({ dark }) => {
+import React, { useState } from "react";
+import Button from "@mui/material/Button";
+const FileUploader = ({ dark, sendFile }) => {
+  const [file, setFile] = useState(null);
   return (
     <div
       className={`p-6 rounded-xl border ${
@@ -12,19 +13,43 @@ const FileUploader = ({ dark }) => {
       <div
         className="h-48 border-2 border-dashed border-blue-500 
             rounded-xl flex flex-col items-center justify-center"
+        onDragOver={(e) => {
+          e.preventDefault();
+          //        console.log(e);
+        }}
+        onDragLeave={(e) => {
+          e.preventDefault();
+          //          console.log(e);
+        }}
+        onDrop={(e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          setFile(e.dataTransfer.files[0]);
+          sendFile(e.dataTransfer.files[0]);
+        }}
       >
-        <p className="text-lg">📄 Drag & Drop your resume</p>
+        {file ? (
+          <p className="text-lg">Choose file uploaded</p>
+        ) : (
+          <p className="text-lg">📄 Drag & Drop your resume</p>
+        )}
 
         <p className="my-3 opacity-70">or</p>
 
-        <label
-          className="
+        {file ? (
+          <Button variant="contained" color="success">
+            Success
+          </Button>
+        ) : (
+          <label
+            className="
               bg-blue-600 text-white px-6 py-2 
               rounded-lg cursor-pointer"
-        >
-          Choose File
-          <input type="file" className="hidden" accept=".pdf,.doc,.docx" />
-        </label>
+          >
+            Choose File
+            <input type="file" className="hidden" accept=".pdf,.doc,.docx" />
+          </label>
+        )}
 
         <p className="mt-3 text-sm">PDF / DOCX only</p>
       </div>

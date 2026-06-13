@@ -1,8 +1,17 @@
 import ProgressBar from "../../components/ui/ProgressBar";
-import React from "react";
+import React, { useState } from "react";
 import FileUploader from "../../components/ui/FileUploader";
 import { AtsResultCard } from "../../components/ui/AtsResultCard";
 const Ats = ({ dark }) => {
+  const [resumeData, setResumeData] = useState(null);
+  const [jobDes, setJobDes] = useState(null);
+  const sendFile = (file) => {
+    setResumeData(file);
+  };
+
+  // {
+  //   console.log(resumeData);
+  // }
   return (
     <div
       className={`min-h-screen px-5 py-10 ${
@@ -25,7 +34,7 @@ const Ats = ({ dark }) => {
 
       {/* Upload Section */}
       <section className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-        <FileUploader dark={dark} />
+        <FileUploader dark={dark} sendFile={sendFile} />
         {/* Job Description */}
 
         <div
@@ -41,6 +50,9 @@ const Ats = ({ dark }) => {
             w-full h-48 p-4 rounded-xl
             border outline-none
             bg-transparent"
+            onChange={(e) => {
+              setJobDes(e.nativeEvent.data);
+            }}
           />
 
           <button
