@@ -47,7 +47,15 @@ const FileUploader = ({ dark, sendFile }) => {
               rounded-lg cursor-pointer"
           >
             Choose File
-            <input type="file" className="hidden" accept=".pdf,.doc,.docx" />
+            <input
+              type="file"
+              className="hidden"
+              accept=".pdf,.doc,.docx"
+              onChange={(e) => {
+                setFile(e.target.files[0]);
+                sendFile(e.target.files[0]);
+              }}
+            />
           </label>
         )}
 
