@@ -22,8 +22,8 @@ function App() {
         <Route path="/resume" element={<Resume />}></Route>
         <Route path="/job" element={<Job />}></Route>
         <Route path="/about" element={<About dark={dark} />}></Route>
-        <Route path="/resume/ats" element={<Ats />}></Route>
-        <Route path="/resume/resume" element={<Resume />}></Route>
+        <Route path="/resume/ats" element={<Ats dark={dark} />}></Route>
+        <Route path="/resume/resume" element={<Resume dark={dark} />}></Route>
       </Routes>
     </>
   );
