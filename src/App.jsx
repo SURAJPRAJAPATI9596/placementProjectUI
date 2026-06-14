@@ -19,7 +19,6 @@ function App() {
           element={<Home dark={dark} setDark={setDark}></Home>}
         ></Route>
         <Route path="/resources" element={<Resources />}></Route>
-        <Route path="/resume" element={<Resume />}></Route>
         <Route path="/job" element={<Job />}></Route>
         <Route path="/about" element={<About dark={dark} />}></Route>
         <Route path="/ats" element={<Ats dark={dark} />}></Route>
