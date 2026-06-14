@@ -174,11 +174,11 @@ const Navbar = ({ dark, setDark }) => {
             onClose={handleClose}
           >
             <MenuItem onClick={handleClose}>
-              <NavLink to="/resume/resume">Create Resume</NavLink>
+              <NavLink to="/resume">Create Resume</NavLink>
             </MenuItem>
 
             <MenuItem onClick={handleClose}>
-              <NavLink to="/resume/Ats">ATS Score</NavLink>
+              <NavLink to="/ats">ATS Score</NavLink>
             </MenuItem>
           </Menu>
           <span className="cursor-pointer" onClick={handleJobOpen}>

@@ -1,8 +1,8 @@
-import ProgressBar from "../../components/ui/ProgressBar";
+import ProgressBar from "../components/ui/ProgressBar";
 import React, { useState } from "react";
-import FileUploader from "../../components/ui/FileUploader";
-import { AtsResultCard } from "../../components/ui/AtsResultCard";
-import CallAPI from "../../CallAPI/CallAPI";
+import FileUploader from "../components/ui/FileUploader";
+import { AtsResultCard } from "../components/ui/AtsResultCard";
+import CallAPI from "../CallAPI/CallAPI";
 const Ats = ({ dark }) => {
   const [resumeData, setResumeData] = useState(null);
   const [jobDes, setJobDes] = useState(null);
