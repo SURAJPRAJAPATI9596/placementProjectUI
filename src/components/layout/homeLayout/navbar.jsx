@@ -68,8 +68,21 @@ const Navbar = ({ dark, setDark }) => {
             <MenuItem onClick={handleClose}>Aptitude Preparation</MenuItem>
           </Menu>
           <span className="cursor-pointer" onClick={handleResumeOpen}>
-            <NavLink to="/resume">Resume ▼</NavLink>
+            Resume ▼
           </span>
+          <Menu
+            anchorEl={resumeAnchor}
+            open={Boolean(resumeAnchor)}
+            onClose={handleClose}
+          >
+            <MenuItem onClick={handleClose}>
+              <NavLink to="/resume">Create Resume</NavLink>
+            </MenuItem>
+
+            <MenuItem onClick={handleClose}>
+              <NavLink to="/ats">ATS Score</NavLink>
+            </MenuItem>
+          </Menu>
           <span className="cursor-pointer" onClick={handleJobOpen}>
             <NavLink to="/jobs"></NavLink>
             Jobs ▼
